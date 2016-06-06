@@ -53,7 +53,7 @@ Here are some of the relevant Environment Variables.
                -e GOOGLE_PROJECT=my-project \
                -e GOOGLE_APPLICATION_CREDENTIALS=/etc/credentials.json \
                -v $(pwd)/credentials.json:/etc/credentials.json \
-               gitlab-runner
+               wikiwi/gitlab-ci-autoscale-runner
 
 ### Start runner using DigitalOcean
 
@@ -61,7 +61,7 @@ Here are some of the relevant Environment Variables.
                -e REGISTRATION_TOKEN=Xz5waDAF4sgfADEXAMPLE \
                -e MACHINE_DRIVER=google \
                -e DIGITALOCEAN_ACCESS_TOKEN=2SBxEFaAWDe3AAWDEXAMPLE
-               gitlab-runner
+               wikiwi/gitlab-ci-autoscale-runner
 
 ## Docker Hub
 Automated build is available at the [Docker Hub](https://hub.docker.com/r/wikiwi/gitlab-ci-autoscale-runner).
