@@ -23,7 +23,7 @@ Here are some of the relevant Environment Variables.
 | S3_ACCESS_KEY | - | S3 Credentials |
 | S3_SECRET_KEY | - | S3 Credentials |
 | S3_BUCKET_NAME | - | Name of Bucket in S3 |
-| S3_REGION | - | Region of Bucket in S3 |
+| S3_BUCKET_LOCATION | - | Region of Bucket in S3 |
 | S3_CACHE_INSECURE | false | If true use http instead of https |
 | DIGITALOCEAN_ACCESS_TOKEN | - | Access Token for creating VMs on DigitalOcean |
 | DIGITALOCEAN_REGION | nyc3 | Region to run Droplets in |
