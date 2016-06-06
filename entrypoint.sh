@@ -3,7 +3,7 @@ set -eu
 
 CONFIG_FILE=${CONFIG_FILE:-/etc/gitlab-runner/config.toml}
 if [[ $EUID -ne 0 ]]; then
-  CONFIG_FILE="~/.gitlab-runner/config.toml"
+  CONFIG_FILE="$HOME/.gitlab-runner/config.toml"
 fi
 
 if [[ ! -e "$CONFIG_FILE" ]]; then
