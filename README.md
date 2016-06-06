@@ -1,5 +1,5 @@
-# gitlab-ci-autoscale-runner
-gitlab-ci-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images.
+# gitlab-autoscale-runner
+gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images.
 
 ## Environment Variables
 Here are some of the relevant Environment Variables.
@@ -53,7 +53,7 @@ Here are some of the relevant Environment Variables.
                -e GOOGLE_PROJECT=my-project \
                -e GOOGLE_APPLICATION_CREDENTIALS=/etc/credentials.json \
                -v $(pwd)/credentials.json:/etc/credentials.json \
-               wikiwi/gitlab-ci-autoscale-runner
+               wikiwi/gitlab-autoscale-runner
 
 ### Start runner using DigitalOcean
 
@@ -61,10 +61,10 @@ Here are some of the relevant Environment Variables.
                -e REGISTRATION_TOKEN=Xz5waDAF4sgfADEXAMPLE \
                -e MACHINE_DRIVER=google \
                -e DIGITALOCEAN_ACCESS_TOKEN=2SBxEFaAWDe3AAWDEXAMPLE
-               wikiwi/gitlab-ci-autoscale-runner
+               wikiwi/gitlab-autoscale-runner
 
 ## Docker Hub
-Automated build is available at the [Docker Hub](https://hub.docker.com/r/wikiwi/gitlab-ci-autoscale-runner).
+Automated build is available at the [Docker Hub](https://hub.docker.com/r/wikiwi/gitlab-autoscale-runner).
 
 ## TODO
 Integrate and document AWS driver.
