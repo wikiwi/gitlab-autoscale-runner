@@ -3,6 +3,7 @@ gitlab-ci-autoscale-runner is a docker container specialized in creating an [aut
 
 ## Environment Variables
 Here are some of the relevant Environment Variables.
+
 | Name | Default | Description |
 | ---- |:-------:| ----------- |
 | CI_SERVER_URL | https://gitlab.com/ci | The CI endpoint of gitlab |
