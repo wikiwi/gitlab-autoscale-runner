@@ -6,6 +6,7 @@ Here are some of the relevant Environment Variables.
 
 | Name | Default | Description |
 | ---- |:-------:| ----------- |
+| CONFIG_FILE | /etc/gitlab-runner/config.toml | Path to config file |
 | CI_SERVER_URL | https://gitlab.com/ci | The CI endpoint of gitlab |
 | REGISTRATION_TOKEN | - | The Runners Registration Token|
 | RUNNER_NAME | Autoscale Runner | Name of Runner |
