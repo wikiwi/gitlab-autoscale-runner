@@ -1,5 +1,5 @@
 # gitlab-autoscale-runner
-gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images.
+gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images. The runner is automatically registered to the gitlab server.
 
 ## Environment Variables
 Here are some of the relevant Environment Variables.
@@ -43,6 +43,9 @@ Here are some of the relevant Environment Variables.
 | GOOGLE_USE_INTERNAL_IP | false | Use internal IP when connecting to VM |
 | GOOGLE_TAGS | gitlab-autoscale | Tags to be attached to the VMs |
 | GOOGLE_PREEMPTIBLE | false | Use preemtible VMs |
+
+## Persistance
+For persistance you need to put the config file in a persistant volume. The config file if run as root is specified using the `CONFIG_FILE` Environment Variable otherwise it is saved to ~/.gitlab-runner/config.toml.
 
 ## Examples
 ### Start runner using GCE
