@@ -8,9 +8,9 @@ Here are some of the relevant Environment Variables.
 | ---- |:-------:| ----------- |
 | CONFIG_FILE | /etc/gitlab-runner/config.toml | Path to config file |
 | CI_SERVER_URL | https://gitlab.com/ci | The CI endpoint of gitlab |
+| CONCURRENT | 1 | Maximum number of machines running concurrently |
 | REGISTRATION_TOKEN | - | The Runners Registration Token|
 | RUNNER_NAME | Autoscale Runner | Name of Runner |
-| RUNNER_LIMIT | 5 | Maximum number of machines to be created |
 | MACHINE_NAME | gitlab-autoscale-%s | Naming scheme for the VMs |
 | MACHINE_MAX_BUILDS | 100 | Maximum builds until a machine is delete |
 | MACHINE_IDLE_COUNT | 0 | Number of permanent idling hosts |
