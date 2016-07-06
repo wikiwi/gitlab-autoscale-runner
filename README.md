@@ -69,6 +69,9 @@ For persistance you need to put the config file in a persistant volume. The conf
 ## Docker Hub
 Automated build is available at the [Docker Hub](https://hub.docker.com/r/wikiwi/gitlab-autoscale-runner).
 
+## Limitations
+- Currently the config is only created during first run and is never updated.
+
 ## TODO
-Integrate and document AWS driver.
+- Integrate and document AWS driver.
 
