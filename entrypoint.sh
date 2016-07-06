@@ -16,6 +16,7 @@ cat <<MULTILINE >> "$CONFIG_FILE"
     MachineName = "$MACHINE_NAME"
     MachineDriver = "$MACHINE_DRIVER"
 MULTILINE
+sed -i "s/concurrent = 1/concurrent = $CONCURRENT/g" "$CONFIG_FILE"
 fi
 
 gitlab-ci-multi-runner run
