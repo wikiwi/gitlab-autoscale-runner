@@ -1,4 +1,7 @@
 # gitlab-autoscale-runner
+
+*__Warning__: This is an early alpha version without commitment for backwards compatibility.*
+
 gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images. The runner is automatically registered to the gitlab server.
 
 ## Environment Variables
