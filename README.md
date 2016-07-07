@@ -18,7 +18,7 @@ Here are some of the relevant Environment Variables.
 | MACHINE_DRIVER | - | Docker Machine driver e.g: 'digitalocean', 'google', 'aws', ... |
 | DOCKER_IMAGE | docker:latest | Default image to run builds |
 | DOCKER_PULL_POLICY | always | Image Pull Policy |
-| DOCKER_PRIVILEDGED | true | Priviledged is required to run docker builds. *Attention*: Only allow trusted builds to run on this runner when this is true |
+| DOCKER_PRIVILEGED | true | Privileged is required to run docker builds. *Attention*: Only allow trusted builds to run on this runner when this is true |
 | CACHE_TYPE | - | Currently only s3 is supported for caching |
 | S3_SERVER_ADDRESS | s3.amazonaws.com | Address of S3-compactible endpoint |
 | S3_ACCESS_KEY | - | S3 Credentials |

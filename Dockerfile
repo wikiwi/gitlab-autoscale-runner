@@ -18,7 +18,7 @@ ENV RUNNER_NAME="Autoscale Runner" \
     RUNNER_EXECUTOR=docker+machine \
     DOCKER_IMAGE="docker:latest" \
     DOCKER_PULL_POLICY=always \
-    DOCKER_PRIVILEDGED=true
+    DOCKER_PRIVILEGED=true
 
 RUN apk add --update \
     bash \
