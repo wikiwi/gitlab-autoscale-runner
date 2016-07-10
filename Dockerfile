@@ -35,7 +35,9 @@ RUN wget -O /usr/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner-downl
   chmod -R 700 /etc/gitlab-runner
 
 COPY entrypoint.sh /sbin/entrypoint.sh
-RUN chmod 755 /sbin/entrypoint.sh
+COPY register.sh /usr/bin/register.sh
+
+RUN chmod 755 /sbin/entrypoint.sh /usr/bin/register.sh
 
 VOLUME ["/etc/gitlab-runner"]
 ENTRYPOINT ["/sbin/entrypoint.sh"]
