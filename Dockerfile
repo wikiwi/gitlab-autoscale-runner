@@ -2,7 +2,7 @@ FROM alpine
 
 ENV RUNNER_NAME="Autoscale Runner" \
     RUNNER_LIMIT=1 \
-    CONCURRENT=0 \
+    CONCURRENT=20 \
     MACHINE_NAME=gitlab-autoscale-%s \
     MACHINE_IDLE_COUNT=0 \
     MACHINE_IDLE_TIME=600 \
