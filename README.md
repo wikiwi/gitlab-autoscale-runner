@@ -2,7 +2,7 @@
 
 *__Warning__: This is an early alpha version without commitment for backwards compatibility.*
 
-gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images. The runner is automatically registered to the gitlab server.
+gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images. The first runner is automatically created and registered to the gitlab server.
 
 ## Environment Variables
 Here are some of the relevant Environment Variables.
@@ -70,11 +70,20 @@ For persistance you need to put the config file in a persistant volume. The conf
                -e DIGITALOCEAN_ACCESS_TOKEN=2SBxEFaAWDe3AAWDEXAMPLE
                wikiwi/gitlab-autoscale-runner
 
+### Updating Config
+    # When running as non-root
+    docker exec CONTAINER vi /home/gitlab-runner/.gitlab-runner/config.toml
+
+    # When running as root
+    docker exec CONTAINER vi /etc/gitlab-runner/config.toml
+
+
+### Add additional Runner
+    # When running as root
+    docker exec CONTAINER /bin/bash -c "RUNNER_NAME='My Runner' RUNNER_LIMIT=1 register.sh"
+
 ## Docker Hub
 Automated build is available at the [Docker Hub](https://hub.docker.com/r/wikiwi/gitlab-autoscale-runner).
-
-## Limitations
-- Currently the config is only created during first run and is never updated.
 
 ## TODO
 - Integrate and document AWS driver.
