@@ -8,8 +8,9 @@ fi
 
 if [[ ! -e "$CONFIG_FILE" ]]; then
 register.sh
-sed -i "s/concurrent = 1/concurrent = $CONCURRENT/g" "$CONFIG_FILE"
 fi
+
+sed -E -i "s/concurrent = [0-9]+/concurrent = $CONCURRENT/g" "$CONFIG_FILE"
 
 gitlab-ci-multi-runner run
 
