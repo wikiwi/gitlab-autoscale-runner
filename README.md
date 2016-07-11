@@ -66,16 +66,16 @@ For persistance you need to put the config file in a persistant volume. The conf
 
     docker run -e CI_SERVER_URL=https://gitlab.example.io/ci \
                -e REGISTRATION_TOKEN=Xz5waDAF4sgfADEXAMPLE \
-               -e MACHINE_DRIVER=google \
+               -e MACHINE_DRIVER=digitalocean \
                -e DIGITALOCEAN_ACCESS_TOKEN=2SBxEFaAWDe3AAWDEXAMPLE
                wikiwi/gitlab-autoscale-runner
 
-### Updating Config
+### Update Config
     # When running as non-root
-    docker exec CONTAINER vi /home/gitlab-runner/.gitlab-runner/config.toml
+    docker exec -it CONTAINER vi /home/gitlab-runner/.gitlab-runner/config.toml
 
     # When running as root
-    docker exec CONTAINER vi /etc/gitlab-runner/config.toml
+    docker exec -it CONTAINER vi /etc/gitlab-runner/config.toml
 
 
 ### Add additional Runner
