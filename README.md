@@ -79,7 +79,6 @@ For persistance you need to put the config file in a persistant volume. The conf
 
 
 ### Add additional Runner
-    # When running as root
     docker exec CONTAINER /bin/bash -c "RUNNER_NAME='My Runner' RUNNER_LIMIT=1 register.sh"
 
 ## Docker Hub
