@@ -4,7 +4,12 @@
 
 gitlab-autoscale-runner is a docker container specialized in creating an [autoscale runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/configuration/autoscale.md) for gitlab. The default settings are geared towards creating a runner that allows building docker images. The first runner is automatically created and registered to the gitlab server.
 
-[![Code Climate](https://codeclimate.com/github/wikiwi/gitlab-autoscale-runner/badges/gpa.svg)](https://codeclimate.com/github/wikiwi/gitlab-autoscale-runner) [![Docker Hub](https://img.shields.io/docker/pulls/wikiwi/gitlab-autoscale-runner.svg)](https://hub.docker.com/r/wikiwi/gitlab-autoscale-runner)
+[![Code Climate Widget]][Code Climate] [![Docker Hub Widget]][Docker Hub]
+
+[Code Climate]: https://codeclimate.com/github/wikiwi/gitlab-autoscale-runner
+[Code Climate Widget]: https://codeclimate.com/github/wikiwi/gitlab-autoscale-runner/badges/gpa.svg
+[Docker Hub]: https://hub.docker.com/r/wikiwi/gitlab-autoscale-runner
+[Docker Hub Widget]: https://img.shields.io/docker/pulls/wikiwi/gitlab-autoscale-runner.svg
 
 ## Environment Variables
 Here are some of the relevant Environment Variables.
