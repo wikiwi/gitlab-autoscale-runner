@@ -1,5 +1,10 @@
 FROM alpine
 
+LABEL org.label-schema.vcs-url="https://github.com/wikiwi/gitlab-autoscale-runner" \
+      org.label-schema.vendor=wikiwi.io \
+      org.label-schema.name=gitlab-autoscale-runner \
+      io.wikiwi.license=MIT
+
 ENV RUNNER_NAME="Autoscale Runner" \
     RUNNER_LIMIT=1 \
     CONCURRENT=20 \
